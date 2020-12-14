@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KWE-PM-SIL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FiftyGram-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FiftyGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j4m-jz-0d5">
+                                <rect key="frame" x="14" y="109" width="380" height="319"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="319" id="JPz-bg-auO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3E4-b7-8qU">
+                                <rect key="frame" x="187.5" y="508" width="39" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="61Q-Gj-hYv"/>
+                                </constraints>
+                                <state key="normal" title="Sepia"/>
+                                <connections>
+                                    <action selector="sepiaFilterApply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKb-LR-Kia"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3E4-b7-8qU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0ZC-Gc-LBY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j4m-jz-0d5" secondAttribute="trailing" constant="20" id="fP6-an-reM"/>
+                            <constraint firstItem="j4m-jz-0d5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="yQo-sd-LFU"/>
+                            <constraint firstItem="3E4-b7-8qU" firstAttribute="top" secondItem="j4m-jz-0d5" secondAttribute="bottom" constant="80" id="ynw-3O-DnM"/>
+                            <constraint firstItem="j4m-jz-0d5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="z75-iG-YHc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FiftyGram" id="Pas-P8-xKf">
+                        <barButtonItem key="rightBarButtonItem" title="Choose Photo" id="1hB-Am-GtC">
+                            <connections>
+                                <action selector="choosePhotoBttonDidTap:" destination="BYZ-38-t0r" id="bjs-3o-O52"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="j4m-jz-0d5" id="Vzq-W2-Lti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rBF-sc-w0D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KWE-PM-SIL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="glR-7h-TA5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9wS-rh-TTa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDB-Gf-cZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
